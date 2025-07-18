@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import './index.css';
-import bgImage from './assets/BG2.jpg';
 
 function App() {
   const [notes, setNotes] = useState(() => {
