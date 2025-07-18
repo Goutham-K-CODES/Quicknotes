@@ -1,0 +1,121 @@
+/* Make background cover full screen */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-image: url('BG2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: hueSpin 20s linear infinite;
+}
+
+/* Optional hue-rotate animation */
+@keyframes hueSpin {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Container (card with blur/glass effect) */
+.container {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+/* Heading */
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Note input area */
+.note-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.note-input input,
+.note-input textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.note-input button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #ff1493; /* hot pink */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.note-input button:hover {
+  background-color: #d01378;
+}
+
+/* Search bar */
+.search-bar {
+  width: 95%;
+  padding: 11px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Notes list */
+.notes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Each note */
+.note-card {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.note-card h2 {
+  margin: 0 0 10px 0;
+}
+
+.note-card p {
+  margin: 0 0 10px 0;
+}
+
+.delete-btn {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
